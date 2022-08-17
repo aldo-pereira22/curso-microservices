@@ -35,25 +35,25 @@ services:
       - 27017:27017
       - 28017:28017    
 
-  auth-api:
+  auth-api-1:
     build: ./auth-api
-    container_name: auth-api
+    container_name: auth-api-1
     environment:
       - PORT=8080
     ports:
       - 8080:8080
 
-  product-api:
+  product-api-1:
     build: ./product-api_
-    container_name: product-api
+    container_name: product-api-1
     environment:
       - PORT=8081
     ports:
       - 8081:8081
 
-  sales-api:
+  sales-api-1:
     build: ./sales-api
-    container_name: sales-api
+    container_name: sales-api-1
     environment:
       - PORT=8082
     ports:
