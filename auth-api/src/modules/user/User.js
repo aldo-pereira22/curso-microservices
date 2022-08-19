@@ -1,37 +1,28 @@
 import Sequelize from 'sequelize'
 
+import sequelize from '../user/../../config/db/dbConfig.js'
 
-import sequelize from '../../config/db/dbConfig'
-
-
-const User = sequelize.define("user", {
+const User = sequelize.define('user', {
     id: {
         type: Sequelize.INTEGER,
         primaryKey: true,
         autoIncrement: true
-
     },
     name: {
-        type: Sequelize.SRING,
+        type: Sequelize.STRING,
         allowNull: false
-
     },
     email: {
-        type: Sequelize.SRING,
+        type: Sequelize.STRING,
         allowNull: false
-
     },
     password: {
-        type: Sequelize.SRING,
+        type: Sequelize.STRING,
         allowNull: false
-
-    },
-
-
-},
-    {
-
     }
-)
+},
+    {}
 
+
+)
 export default User

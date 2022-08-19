@@ -1,7 +1,8 @@
 import Sequelize from 'sequelize'
-const sequelize = new Sequelize("auth-db", "postgres", "1234", {
-    host: "localhost",
-    dialect: "postgres",
+
+const sequelize = new Sequelize('auth-db', 'postgres', '123456', {
+    host: 'localhost',
+    dialect: 'postgres',
     quoteIdentifiers: false,
     define: {
         syncOnAssociation: true,
@@ -15,10 +16,10 @@ const sequelize = new Sequelize("auth-db", "postgres", "1234", {
 sequelize
     .authenticate()
     .then(() => {
-        console.info("Conexão estabelecida!!!")
+        console.log("Conectado ao banco de dados!")
     })
     .catch((err) => {
-        console.error("Erro ao se conectar com o banco de dados: ", err.message)
+        console.log("Erro ao se conectar com o banco de dados : ", err.message)
     })
 
 export default sequelize
