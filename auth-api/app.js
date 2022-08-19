@@ -1,4 +1,7 @@
 import express from "express";
+// import * as db from './src/config/db/initialData'
+import * as db from './src/config/db/init.js    '
+const database = './db'
 const app = express()
 const env = process.env
 const PORT = env.PORT || 3000
