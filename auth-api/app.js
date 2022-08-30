@@ -1,8 +1,8 @@
 import express from "express";
-const database = './db'
+import * as db from './src/config/db/initialData.js'
 const app = express()
 const env = process.env
-const PORT = env.PORT || 3000
+const PORT = env.PORT || 6000
 
 
 app.get('/api/status', (req, res) => {
