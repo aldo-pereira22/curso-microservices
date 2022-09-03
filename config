@@ -1,6 +1,13 @@
 
 
 
+
+iniciar os serviços
+
+
+
+DOCKER
+
 POSTGRES
 
 AUTENTICAÇÃO
@@ -31,6 +38,29 @@ docker run --name sales_rabbit -p 5672:5672 -p 25676:25676 -p 15672:15672 rabbit
 product API DOCKER - SPRING BOOT GRADLE
 
 docker run --name product-api -p 8081:8081 product-api
+
+
+
+AUTH DB CONEXAO ALTERNATIVA;
+
+docker run --name auth-db-conexao-extra -p 5437:5432 -e POSTGRES_DB=auth-db -e POSTGRES_USER=admin -e POSTGRES_PASSWORD=123456 postgres:11
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

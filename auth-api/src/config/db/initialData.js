@@ -1,5 +1,5 @@
 import bcrypt from 'bcrypt'
-import User from '../db/dbConfig.js'
+import User from '../../modules/user/model/User.js'
 
 export async function createInitialdata() {
     await User.sync({ force: true })
