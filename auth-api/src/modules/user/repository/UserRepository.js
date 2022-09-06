@@ -1,8 +1,6 @@
-import User from '../model/User/'
-
+import User from '../model/User.js'
 
 class UserRepository {
-
 
     async findById(id) {
         try {
@@ -11,8 +9,8 @@ class UserRepository {
             console.log(error.message)
             return null
         }
-
     }
+
     async findByEmail(email) {
         try {
             return await User.findOne({ where: { email } })
