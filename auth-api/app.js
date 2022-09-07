@@ -2,6 +2,7 @@ import express from "express"
 import * as db from './src/config/db/initialData.js'
 
 import userRoutes from './src/modules/user/routes/UserRouter.js'
+import checkToken from "./src/config/auth/checkToken.js"
 const app = express()
 
 
@@ -13,6 +14,8 @@ const PORT = env.PORT || 5000
 db.createInitialdata()
 app.use(express.json())
 app.use(userRoutes)
+app.use(checkToken)
+
 app.get('/api/status', (req, res) => {
     return res.status(200).json({
         service: "Auth-API",
