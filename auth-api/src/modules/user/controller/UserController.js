@@ -5,7 +5,6 @@ class UserController {
     async getAcessToken(req, res) {
         let acessToken = await UserService.getAcessToken(req)
         return res.status(acessToken.status).json(acessToken)
-
     }
 
     async findByEmail(req, res) {
@@ -13,6 +12,5 @@ class UserController {
         return res.status(user.status).json(user)
     }
 }
-
 
 export default new UserController()
